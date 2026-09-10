@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KidSafe</string>
+    <string name="accessibility_description">KidSafe uses this to detect when a blocked app (such as WhatsApp) is opened, so it can show the block screen. It does not read the content of your screens or collect any data.</string>
+</resources>
