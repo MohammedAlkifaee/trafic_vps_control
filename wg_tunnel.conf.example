@@ -1,0 +1,21 @@
+# Example tunnel config for the KidSafe app.
+#
+# Copy this to:  android/app/src/main/res/raw/wg_tunnel.conf
+# and fill in the values you generated on the server (Part 1, step 2).
+#
+# That path is git-ignored on purpose — it contains a private key.
+
+[Interface]
+# From `wg genkey | tee client.key | wg pubkey > client.pub`  → contents of client.key
+PrivateKey = <CLIENT_PRIVATE_KEY>
+Address = 10.7.0.2/32
+# The server's wg0 address — this is what forces DNS through your filter
+DNS = 10.7.0.1
+
+[Peer]
+# Contents of server.pub
+PublicKey = <SERVER_PUBLIC_KEY>
+Endpoint = <SERVER_PUBLIC_IP>:51820
+# 0.0.0.0/0 sends ALL phone traffic through the tunnel
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25

@@ -43,3 +43,26 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# ---------------------------------------------------------------------------
+# SECRETS — these hold WireGuard private keys. Never commit them.
+# ---------------------------------------------------------------------------
+# Tunnel config compiled into the APK (contains the client private key)
+android/app/src/main/res/raw/wg_tunnel.conf
+# Generated server script with the server private key baked in
+vps/vps_setup_ready.sh
+# Phone config / key material
+vps/kidsafe-phone.conf
+vps/*.png
+*.key
+*.pub
+*.conf.local
+
+# Built artifacts (the APK embeds the client private key — don't publish it)
+*.apk
+*.aab
+
+# Android signing
+android/key.properties
+*.jks
+*.keystore
