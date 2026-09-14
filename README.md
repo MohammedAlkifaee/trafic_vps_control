@@ -1,4 +1,4 @@
-# KidSafe
+# youtube or any application prevention
 
 Self-hosted, network-level parental controls for a child's phone.
 
