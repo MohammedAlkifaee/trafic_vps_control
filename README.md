@@ -16,7 +16,7 @@ be defeated by uninstalling a "blocker" app.
 ## How it works
 
 ```
-   Child's phone                          Your VPS
+   another's phone                          Your VPS
 ┌──────────────────┐                ┌──────────────────────────────┐
 │  KidSafe APK     │                │  WireGuard  (wg0, 10.7.0.1)  │
 │  (WireGuard      │───encrypted───▶│      │                       │
